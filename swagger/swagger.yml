@@ -1,0 +1,334 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /as_zone_object_info/:
+    get:
+      tags:
+      - as_zone_object_info
+      description: get AsZoneObjectInfo
+      operationId: AsZoneObjectInfoController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsZoneObjectInfo'
+        "403":
+          description: ""
+    post:
+      tags:
+      - as_zone_object_info
+      description: create AsZoneObjectInfo
+      operationId: AsZoneObjectInfoController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for AsZoneObjectInfo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.AsZoneObjectInfo'
+      responses:
+        "201":
+          description: '{int} models.AsZoneObjectInfo'
+        "403":
+          description: body is empty
+  /as_zone_object_info/{id}:
+    get:
+      tags:
+      - as_zone_object_info
+      description: get AsZoneObjectInfo by id
+      operationId: AsZoneObjectInfoController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsZoneObjectInfo'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - as_zone_object_info
+      description: update the AsZoneObjectInfo
+      operationId: AsZoneObjectInfoController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for AsZoneObjectInfo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.AsZoneObjectInfo'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsZoneObjectInfo'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - as_zone_object_info
+      description: delete the AsZoneObjectInfo
+      operationId: AsZoneObjectInfoController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /as_zone_object_option/:
+    get:
+      tags:
+      - as_zone_object_option
+      description: get AsZoneObjectOption
+      operationId: AsZoneObjectOptionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsZoneObjectOption'
+        "403":
+          description: ""
+    post:
+      tags:
+      - as_zone_object_option
+      description: create AsZoneObjectOption
+      operationId: AsZoneObjectOptionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for AsZoneObjectOption content
+        required: true
+        schema:
+          $ref: '#/definitions/models.AsZoneObjectOption'
+      responses:
+        "201":
+          description: '{int} models.AsZoneObjectOption'
+        "403":
+          description: body is empty
+  /as_zone_object_option/{id}:
+    get:
+      tags:
+      - as_zone_object_option
+      description: get AsZoneObjectOption by id
+      operationId: AsZoneObjectOptionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsZoneObjectOption'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - as_zone_object_option
+      description: update the AsZoneObjectOption
+      operationId: AsZoneObjectOptionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for AsZoneObjectOption content
+        required: true
+        schema:
+          $ref: '#/definitions/models.AsZoneObjectOption'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.AsZoneObjectOption'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - as_zone_object_option
+      description: delete the AsZoneObjectOption
+      operationId: AsZoneObjectOptionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+definitions:
+  models.AsZoneObjectInfo:
+    title: AsZoneObjectInfo
+    type: object
+    properties:
+      AddUser:
+        type: string
+      AdditionAttribute:
+        description: 附加信息
+        type: string
+      BasicAttribute:
+        description: 基础信息
+        type: string
+      Comment:
+        description: 说明
+        type: string
+      CreateTm:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      IsActive:
+        description: 是否启用,1启用0不启用,默认不启用
+        type: integer
+        format: int32
+      Name:
+        description: 名称
+        type: string
+      PrimaryKey:
+        description: 主键
+        type: string
+      RefAttribute:
+        description: 关联信息
+        type: string
+      UpdateTm:
+        type: string
+        format: datetime
+      UpdateUser:
+        type: string
+  models.AsZoneObjectOption:
+    title: AsZoneObjectOption
+    type: object
+    properties:
+      AddUser:
+        type: string
+      Comment:
+        description: 说明
+        type: string
+      CreateTm:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      Ip:
+        description: 服务地址
+        type: string
+      IsActive:
+        description: 是否启用,1启用0不启用,默认不启用
+        type: integer
+        format: int32
+      Method:
+        description: 方法（POST,GET,PUT,DELETE......）
+        type: string
+      ObjId:
+        description: 对象id
+        type: integer
+        format: int64
+      OptName:
+        description: 操作名
+        type: string
+      Port:
+        description: 服务端口
+        type: string
+      Protocol:
+        description: 协议
+        type: string
+      UpdateTm:
+        type: string
+        format: datetime
+      UpdateUser:
+        type: string
+      Uri:
+        description: URI
+        type: string
+tags:
+- name: as_zone_object_info
+  description: |
+    AsZoneObjectInfoController operations for AsZoneObjectInfo
+- name: as_zone_object_option
+  description: |
+    AsZoneObjectOptionController operations for AsZoneObjectOption
